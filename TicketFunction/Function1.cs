@@ -75,7 +75,7 @@ namespace TicketFunction
             {
                 await conn.OpenAsync(); // Note the ASYNC
 
-                var query = @"INSERT INTO Tickets (concertId, email, Name, phone, quantity, creditCard, expiration, securityCode, address, city, province, postalCode, country)
+                var query = @"INSERT INTO ConcertTickets (concertId, email, Name, phone, quantity, creditCard, expiration, securityCode, address, city, province, postalCode, country)
                                     VALUES (@concertId, @email, @Name, @phone, @quantity, @creditCard, @expiration, @securityCode, @address, @city, @province, @postalCode, @country);";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
